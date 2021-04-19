@@ -4,9 +4,11 @@
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <GenerateProgramFile>false</GenerateProgramFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <version>1.0.0</version>
     <Authors>Cristian Tejedor</Authors>
-    <PackageId>SchemaWriter</PackageId>
+    <PackageId>SchemaWritter</PackageId>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <DefaultItemExcludes>$(DefaultItemExcludes);Test\*\**;docker\*</DefaultItemExcludes>
   </PropertyGroup>
 
