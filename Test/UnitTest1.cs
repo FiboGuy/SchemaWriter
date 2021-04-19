@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.IO;
 using System.ComponentModel.DataAnnotations;
 
-namespace SchemaWriter.Test
+namespace SchemaWritter.Test
 {
     public class Tests
     {

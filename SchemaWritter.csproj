@@ -9,7 +9,7 @@
     <Authors>Cristian Tejedor</Authors>
     <PackageId>SchemaWritter</PackageId>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <DefaultItemExcludes>$(DefaultItemExcludes);Test\*\**;docker\*</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Test\*;docker\*</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,11 +3,10 @@ using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Security;
 
-namespace SchemaWriter
+namespace SchemaWritter
 {
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {    

@@ -1,4 +1,4 @@
-namespace SchemaWriter.Test
+namespace SchemaWritter.Test
 {
     class Test
     {
