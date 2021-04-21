@@ -12,9 +12,12 @@ namespace SchemaWritter
         {    
             if(Directory.Exists(args[0]))
             {
-                WriteSchema(args[0]);
+                if(args[0] == ".")
+                    WriteSchema(Directory.GetCurrentDirectory());
+                else
+                    WriteSchema(args[0]);
             }else{
-                Console.WriteLine("Not valid path given");
+                    Console.WriteLine("Not valid path given");
             }
         }
 
@@ -65,8 +68,9 @@ namespace SchemaWritter
         private static string getTableStringFromPath(string path, string projectDirName)
         {
             path =  path.Substring(path.IndexOf(projectDirName));
+            Assembly ass = Assembly.GetEntryAssembly();
             string className = path.Replace("/", ".").Replace(".Model.cs","");
-            object model = Activator.CreateInstance(Type.GetType(className));
+            object model = Activator.CreateInstance(ass.GetType(className));
             MethodInfo tableStatements = model.GetType().GetMethod("tableStatements", BindingFlags.NonPublic | BindingFlags.Instance);
             return (string)tableStatements.Invoke(model, new object[]{});
         }
